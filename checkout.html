@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Basket & Checkout | IRONPULSE</title>
 
@@ -97,7 +94,7 @@ h1 {
   background: #333;
   color: #fff;
   border: none;
-  padding: 8px 10px;
+  padding: 8px 12px;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 8px;
@@ -159,6 +156,12 @@ textarea {
   background: #b00000;
 }
 
+.button.disabled {
+  background: #444;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
 .note {
   color: #999;
   font-size: 14px;
@@ -205,7 +208,6 @@ footer {
 }
 
 </style>
-
 </head>
 
 <body>
@@ -226,7 +228,7 @@ alt="IRONPULSE">
 
 <div class="container">
 
-<h1>🛒 Your Basket</h1>
+<h1>🛒 Basket & Checkout</h1>
 
 
 <div class="card">
@@ -251,7 +253,6 @@ alt="IRONPULSE">
 <p style="color:#aaa;">
 Please enter your details before continuing to payment.
 </p>
-
 
 <label for="name">
 Full name
@@ -283,6 +284,7 @@ placeholder="House number, street, town/city, postcode"></textarea>
 
 
 <a
+id="paymentButton"
 class="button"
 href="https://monzo.com/pay/r/ignite-fitness-coaching_f6RvJFebjwKOjb"
 target="_blank"
@@ -292,11 +294,12 @@ Continue to payment
 
 </a>
 
-
 <p class="note">
 
 Your basket total is shown above.
-You will be taken to the secure payment page to complete your payment.
+
+You will be taken to the secure Monzo payment page
+to complete your payment.
 
 </p>
 
@@ -335,6 +338,9 @@ function displayBasket() {
   const totalElement =
     document.getElementById("basketTotal");
 
+  const paymentButton =
+    document.getElementById("paymentButton");
+
 
   container.innerHTML = "";
 
@@ -346,9 +352,14 @@ function displayBasket() {
 
     totalElement.textContent = "£0.00";
 
+    paymentButton.classList.add("disabled");
+
     return;
 
   }
+
+
+  paymentButton.classList.remove("disabled");
 
 
   let total = 0;
@@ -414,7 +425,7 @@ function displayBasket() {
           class="remove"
           onclick="removeItem(${index})">
 
-          Remove
+          Remove item
 
         </button>
 
