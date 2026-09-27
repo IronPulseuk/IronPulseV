@@ -14,101 +14,206 @@
 body {
   margin: 0;
   background: #080808;
-  color: white;
+  color: #fff;
   font-family: Arial, sans-serif;
 }
 
 header {
   background: #000;
-  padding: 18px;
-  text-align: center;
+  padding: 16px;
   border-bottom: 1px solid #222;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
-  width: 180px;
-  max-width: 80%;
+  width: 150px;
+  max-width: 60%;
+}
+
+.basket {
+  background: #e00000;
+  color: #fff;
+  padding: 11px 16px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .container {
   max-width: 1000px;
   margin: auto;
-  padding: 25px 18px;
+  padding: 25px 18px 60px;
 }
 
 .hero {
   text-align: center;
+  padding: 10px 0 30px;
 }
 
 .hero img {
   width: 100%;
-  max-width: 700px;
-  display: block;
-  margin: 0 auto 30px;
+  max-width: 650px;
   border-radius: 12px;
 }
 
-h1 {
-  font-size: 38px;
-  margin: 15px 0;
+.hero h1 {
+  font-size: 42px;
+  margin: 20px 0 8px;
 }
 
-h2 {
-  font-size: 28px;
-  margin-top: 45px;
-}
-
-p {
-  color: #ccc;
-  font-size: 17px;
-  line-height: 1.6;
-}
-
-.price {
-  font-size: 32px;
-  font-weight: bold;
-  margin: 20px 0;
-}
-
-.button {
-  display: inline-block;
-  background: #e00000;
-  color: white;
-  padding: 15px 28px;
-  border-radius: 7px;
-  text-decoration: none;
-  font-weight: bold;
-  margin: 10px 0 30px;
-}
-
-.button:hover {
-  background: #b00000;
+.hero p {
+  color: #bbb;
+  font-size: 18px;
 }
 
 .product {
   background: #111;
+  border: 1px solid #242424;
+  border-radius: 14px;
   padding: 20px;
-  border-radius: 12px;
   margin-top: 30px;
 }
 
-.product img {
+.product-main-image {
   width: 100%;
-  display: block;
+  max-height: 500px;
+  object-fit: contain;
+  background: #080808;
   border-radius: 10px;
 }
+
+.product h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.description {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.price {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 18px 0;
+}
+
+.section-title {
+  font-size: 30px;
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+/* Gallery */
 
 .gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-  margin-top: 20px;
+  gap: 12px;
+  margin-top: 18px;
 }
 
 .gallery img {
   width: 100%;
+  height: 220px;
+  object-fit: contain;
+  background: #080808;
   border-radius: 10px;
 }
+
+/* Colour buttons */
+
+.colours {
+  margin-top: 25px;
+}
+
+.colours strong {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.colour-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.colour-button {
+  background: #181818;
+  color: white;
+  border: 1px solid #444;
+  padding: 12px 18px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.colour-button.active {
+  border: 2px solid #e00000;
+  background: #252525;
+}
+
+/* Quantity */
+
+.quantity-area {
+  margin-top: 25px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.quantity button {
+  width: 42px;
+  height: 42px;
+  background: #222;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 6px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.quantity span {
+  min-width: 30px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Add basket */
+
+.add-button {
+  width: 100%;
+  background: #e00000;
+  color: white;
+  border: none;
+  padding: 17px;
+  margin-top: 25px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background: #b00000;
+}
+
+.message {
+  display: none;
+  text-align: center;
+  margin-top: 15px;
+  color: #6cff6c;
+  font-weight: bold;
+}
+
+/* Features */
 
 .features {
   display: grid;
@@ -118,35 +223,54 @@ p {
 
 .feature {
   background: #111;
-  padding: 15px;
+  padding: 18px;
   border-radius: 10px;
+  border: 1px solid #222;
 }
 
-.feature img {
-  width: 100%;
-  border-radius: 8px;
+.feature h3 {
+  margin-top: 0;
 }
+
+.feature p {
+  color: #aaa;
+  line-height: 1.5;
+}
+
+/* Footer */
 
 footer {
   text-align: center;
   padding: 40px 20px;
-  margin-top: 50px;
   border-top: 1px solid #222;
   color: #777;
+  margin-top: 50px;
 }
+
+/* Mobile */
 
 @media (max-width: 700px) {
 
-  .features {
-    grid-template-columns: 1fr;
+  .hero h1 {
+    font-size: 34px;
   }
 
   .gallery {
     grid-template-columns: 1fr;
   }
 
-  h1 {
-    font-size: 32px;
+  .gallery img {
+    height: auto;
+    max-height: 450px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .colour-button {
+    flex: 1;
+    min-width: 120px;
   }
 }
 </style>
@@ -156,184 +280,191 @@ footer {
 
 <header>
 
-<img
-  class="logo"
-  src="assets/ironpulse-brand.jpg"
-  alt="IRONPULSE"
->
+<a href="index.html">
+<img class="logo" src="assets/ironpulse-brand.jpg" alt="IRONPULSE">
+</a>
+
+<a href="#basket" class="basket">
+🛒 Basket (<span id="basketCount">0</span>)
+</a>
 
 </header>
 
 
 <div class="container">
 
-
 <section class="hero">
 
-<img
-  src="assets/ironpulse-brand.jpg"
-  alt="IRONPULSE"
->
+<img src="assets/ironpulse-brand.jpg" alt="IRONPULSE">
 
-<h1>SALE</h1>
+<h1>IRONPULSE</h1>
 
-<p>
-Premium fitness equipment for serious training.
-</p>
+<p>Premium fitness equipment for serious training.</p>
 
 </section>
 
 
-<section>
+<!-- PRODUCT 1 -->
 
-<div class="product">
+<section class="product">
 
 <img
-  src="assets/product-features.jpg"
-  alt="IRONPULSE Ergonomic Tricep Rope"
->
+class="product-main-image"
+src="assets/product-features.jpg"
+alt="IRONPULSE Ergonomic Tricep Rope">
 
 <h2>Ergonomic Tricep Rope Attachment</h2>
 
-<p>
-Upgrade your cable training with the IRONPULSE Ergonomic Tricep Rope
-Attachment. Featuring braided rope construction and ergonomic handles
-designed for a secure and comfortable grip.
+<p class="description">
+Upgrade your cable training with the IRONPULSE Ergonomic Tricep Rope Attachment.
+Featuring braided rope construction and ergonomic handles designed for a secure and comfortable grip.
 </p>
 
-<div class="price">
-£24.99
+<div class="price">£24.99</div>
+
+<div class="quantity-area">
+
+<strong>Quantity</strong>
+
+<div class="quantity">
+
+<button onclick="changeQuantity('rope', -1)">−</button>
+
+<span id="ropeQuantity">1</span>
+
+<button onclick="changeQuantity('rope', 1)">+</button>
+
 </div>
 
-<a
-  class="button"
-  href="checkout.html"
->
-Buy Now
-</a>
+</div>
 
+<button class="add-button" onclick="addToBasket('rope')">
+Add to Basket
+</button>
+
+<div id="ropeMessage" class="message">
+✓ Added to basket
 </div>
 
 </section>
 
 
-<section>
+<!-- PRODUCT 2 -->
 
-<h2>Product Features</h2>
+<section class="product">
+
+<h2>EVO Fitness Weightlifting Wrist Wraps</h2>
+
+<p class="description">
+Heavy-duty wrist support wraps designed for weightlifting, bodybuilding,
+powerlifting and strength training. Featuring an attached thumb loop,
+blended cotton material and adjustable hook-and-loop straps.
+</p>
+
+<div class="price">£14.95</div>
+
+
+<div class="colours">
+
+<strong>Choose your colour:</strong>
+
+<div class="colour-buttons">
+
+<button
+class="colour-button active"
+onclick="selectColour('Black', this)">
+Black
+</button>
+
+<button
+class="colour-button"
+onclick="selectColour('Red', this)">
+Red
+</button>
+
+<button
+class="colour-button"
+onclick="selectColour('Green', this)">
+Green
+</button>
+
+<button
+class="colour-button"
+onclick="selectColour('Camo Green', this)">
+Camo Green
+</button>
+
+</div>
+
+<p id="selectedColour" style="color:#aaa;">
+Selected: Black
+</p>
+
+</div>
+
+
+<div class="quantity-area">
+
+<strong>Quantity</strong>
+
+<div class="quantity">
+
+<button onclick="changeQuantity('wraps', -1)">−</button>
+
+<span id="wrapQuantity">1</span>
+
+<button onclick="changeQuantity('wraps', 1)">+</button>
+
+</div>
+
+</div>
+
+
+<button class="add-button" onclick="addToBasket('wraps')">
+Add to Basket
+</button>
+
+<div id="wrapMessage" class="message">
+✓ Added to basket
+</div>
+
+
+<h3 class="section-title">EVO Wrist Wraps Gallery</h3>
+
+<div id="evoGallery" class="gallery">
+</div>
+
+</section>
+
+
+<!-- WHY IRONPULSE -->
+
+<h2 class="section-title">Why IRONPULSE?</h2>
 
 <div class="features">
 
+<div class="feature">
+<h3>💪 Serious Training</h3>
+<p>
+Equipment selected for people who take their training seriously.
+</p>
+</div>
 
 <div class="feature">
-
-<img
-  src="assets/product-action-2.webp"
-  alt="IRONPULSE rope attachment"
->
-
-<h3>Ergonomic Handles</h3>
-
+<h3>🇬🇧 UK Stock</h3>
 <p>
-Comfortable molded handles for your cable exercises.
+Products available from UK stock.
 </p>
-
 </div>
-
 
 <div class="feature">
-
-<img
-  src="assets/product-training.jpg"
-  alt="IRONPULSE training"
->
-
-<h3>Versatile Training</h3>
-
+<h3>🔥 Quality Equipment</h3>
 <p>
-Suitable for tricep pushdowns and other cable exercises.
+Practical gym equipment designed for everyday training.
 </p>
-
 </div>
 
-
-<div class="feature">
-
-<img
-  src="assets/product-size.jpg"
-  alt="IRONPULSE size"
->
-
-<h3>Size Reference</h3>
-
-<p>
-Product measurements shown in the original listing.
-</p>
-
 </div>
-
-
-</div>
-
-</section>
-
-
-<section>
-
-<h2>IRONPULSE In Action</h2>
-
-<div class="gallery">
-
-<img
-  src="assets/product-action.png"
-  alt="IRONPULSE product"
->
-
-<img
-  src="assets/product-action-2.webp"
-  alt="IRONPULSE training attachment"
->
-
-<img
-  src="assets/product-training.jpg"
-  alt="IRONPULSE training"
->
-
-<img
-  src="assets/product-uk-stock.webp"
-  alt="IRONPULSE UK stock"
->
-
-</div>
-
-</section>
-
-
-<section>
-
-<h2>Why IRONPULSE?</h2>
-
-<p>
-Designed for gym users looking for practical, versatile cable-training
-equipment.
-</p>
-
-<p>
-<strong>UK stock available.</strong>
-</p>
-
-<p>
-<strong>Price: £24.99</strong>
-</p>
-
-<a
-  class="button"
-  href="checkout.html"
->
-Order Now
-</a>
-
-</section>
-
 
 </div>
 
@@ -344,6 +475,200 @@ Order Now
 
 </footer>
 
+
+<script>
+
+/* =========================
+   BASKET
+========================= */
+
+let basket = JSON.parse(localStorage.getItem("ironpulseBasket")) || [];
+
+let quantities = {
+  rope: 1,
+  wraps: 1
+};
+
+let selectedColour = "Black";
+
+
+/* =========================
+   QUANTITY
+========================= */
+
+function changeQuantity(product, amount) {
+
+  quantities[product] += amount;
+
+  if (quantities[product] < 1) {
+    quantities[product] = 1;
+  }
+
+  if (product === "rope") {
+    document.getElementById("ropeQuantity").textContent =
+      quantities[product];
+  }
+
+  if (product === "wraps") {
+    document.getElementById("wrapQuantity").textContent =
+      quantities[product];
+  }
+}
+
+
+/* =========================
+   COLOUR
+========================= */
+
+function selectColour(colour, button) {
+
+  selectedColour = colour;
+
+  document.getElementById("selectedColour").textContent =
+    "Selected: " + colour;
+
+  document.querySelectorAll(".colour-button").forEach(function(btn) {
+    btn.classList.remove("active");
+  });
+
+  button.classList.add("active");
+}
+
+
+/* =========================
+   ADD TO BASKET
+========================= */
+
+function addToBasket(product) {
+
+  let item;
+
+  if (product === "rope") {
+
+    item = {
+      product: "IRONPULSE Ergonomic Tricep Rope",
+      price: 24.99,
+      quantity: quantities.rope,
+      colour: "Black"
+    };
+
+    document.getElementById("ropeMessage").style.display = "block";
+
+    setTimeout(function() {
+      document.getElementById("ropeMessage").style.display = "none";
+    }, 2000);
+
+  }
+
+
+  if (product === "wraps") {
+
+    item = {
+      product: "EVO Fitness Weightlifting Wrist Wraps",
+      price: 14.95,
+      quantity: quantities.wraps,
+      colour: selectedColour
+    };
+
+    document.getElementById("wrapMessage").style.display = "block";
+
+    setTimeout(function() {
+      document.getElementById("wrapMessage").style.display = "none";
+    }, 2000);
+
+  }
+
+
+  basket.push(item);
+
+  localStorage.setItem(
+    "ironpulseBasket",
+    JSON.stringify(basket)
+  );
+
+  updateBasketCount();
+}
+
+
+/* =========================
+   BASKET COUNT
+========================= */
+
+function updateBasketCount() {
+
+  let count = 0;
+
+  basket.forEach(function(item) {
+    count += item.quantity;
+  });
+
+  document.getElementById("basketCount").textContent = count;
+}
+
+
+/* =========================
+   LOAD EVO IMAGES
+========================= */
+
+async function loadEvoImages() {
+
+  const gallery =
+    document.getElementById("evoGallery");
+
+  try {
+
+    const response = await fetch(
+      "https://api.github.com/repos/IronPulseUK/IronPulseV/contents/assets"
+    );
+
+    const files = await response.json();
+
+    const images = files
+      .filter(function(file) {
+
+        return (
+          file.type === "file" &&
+          /^Screenshot_20260927_.*\.(jpg|jpeg|png|webp)$/i.test(file.name)
+        );
+
+      })
+      .sort(function(a, b) {
+
+        return a.name.localeCompare(b.name);
+
+      });
+
+    images.forEach(function(file) {
+
+      const img = document.createElement("img");
+
+      img.src = file.download_url;
+
+      img.alt =
+        "EVO Fitness Weightlifting Wrist Wraps";
+
+      gallery.appendChild(img);
+
+    });
+
+  } catch (error) {
+
+    gallery.innerHTML =
+      "<p style='color:#aaa;'>Product images could not be loaded.</p>";
+
+  }
+}
+
+
+/* =========================
+   START
+========================= */
+
+updateBasketCount();
+
+loadEvoImages();
+
+</script>
 
 </body>
 </html>
