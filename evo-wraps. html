@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EVO Fitness Wrist Wraps | IRONPULSE</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #080808;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background: #000;
+  padding: 16px 18px;
+  border-bottom: 1px solid #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+  max-width: 55%;
+}
+
+.basket {
+  background: #e00000;
+  color: #fff;
+  text-decoration: none;
+  padding: 11px 15px;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 25px 18px 60px;
+}
+
+.back {
+  display: inline-block;
+  color: #aaa;
+  text-decoration: none;
+  margin-bottom: 25px;
+}
+
+.product {
+  background: #111;
+  border: 1px solid #242424;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.description {
+  color: #bbb;
+  line-height: 1.6;
+}
+
+.price {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+/* GALLERY */
+
+.main-image {
+  width: 100%;
+  max-height: 550px;
+  object-fit: contain;
+  background: #080808;
+  border-radius: 10px;
+}
+
+.thumbnails {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.thumbnails img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  background: #080808;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.thumbnails img:hover {
+  border-color: #e00000;
+}
+
+/* COLOURS */
+
+.colours {
+  margin-top: 28px;
+}
+
+.colour-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.colour-button {
+  background: #181818;
+  color: white;
+  border: 1px solid #444;
+  padding: 12px 18px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.colour-button.active {
+  border: 2px solid #e00000;
+}
+
+/* QUANTITY */
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.quantity button {
+  width: 42px;
+  height: 42px;
+  background: #222;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 6px;
+  font-size: 22px;
+}
+
+.quantity span {
+  font-size: 20px;
+  min-width: 25px;
+  text-align: center;
+}
+
+/* BUTTON */
+
+.add-button {
+  width: 100%;
+  background: #e00000;
+  color: white;
+  border: none;
+  padding: 17px;
+  margin-top: 25px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.message {
+  display: none;
+  text-align: center;
+  color: #6cff6c;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+footer {
+  text-align: center;
+  padding: 35px;
+  border-top: 1px solid #222;
+  color: #777;
+  margin-top: 50px;
+}
+
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 27px;
+  }
+
+  .thumbnails {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .thumbnails img {
+    height: 90px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<a href="index.html">
+<img
+class="logo"
+src="assets/ironpulse-brand.jpg"
+alt="IRONPULSE">
+</a>
+
+<a href="checkout.html" class="basket">
+🛒 Basket (<span id="basketCount">0</span>)
+</a>
+
+</header>
+
+
+<div class="container">
+
+<a href="index.html" class="back">
+← Back to IRONPULSE
+</a>
+
+
+<div class="product">
+
+<h1>EVO Fitness Weightlifting Wrist Wraps</h1>
+
+<p class="description">
+Heavy-duty wrist support wraps designed for weightlifting,
+bodybuilding, powerlifting and strength training.
+Featuring an attached thumb loop, blended cotton material
+and adjustable hook-and-loop straps.
+</p>
+
+<div class="price">£14.95</div>
+
+
+<!-- MAIN IMAGE -->
+
+<img
+id="mainImage"
+class="main-image"
+alt="EVO Fitness Wrist Wraps">
+
+
+<!-- THUMBNAILS -->
+
+<div id="thumbnails" class="thumbnails"></div>
+
+
+<!-- COLOUR -->
+
+<div class="colours">
+
+<strong>Choose your colour:</strong>
+
+<div class="colour-buttons">
+
+<button
+class="colour-button active"
+onclick="selectColour('Black', this)">
+Black
+</button>
+
+<button
+class="colour-button"
+onclick="selectColour('Red', this)">
+Red
+</button>
+
+<button
+class="colour-button"
+onclick="selectColour('Green', this)">
+Green
+</button>
+
+<button
+class="colour-button"
+onclick="selectColour('Camo Green', this)">
+Camo Green
+</button>
+
+</div>
+
+<p id="selectedColour" style="color:#aaa;">
+Selected: Black
+</p>
+
+</div>
+
+
+<!-- QUANTITY -->
+
+<div style="margin-top:25px;">
+
+<strong>Quantity</strong>
+
+<div class="quantity">
+
+<button onclick="changeQuantity(-1)">−</button>
+
+<span id="quantity">1</span>
+
+<button onclick="changeQuantity(1)">+</button>
+
+</div>
+
+</div>
+
+
+<button
+class="add-button"
+onclick="addToBasket()">
+
+Add to Basket
+
+</button>
+
+<div id="message" class="message">
+✓ Added to basket
+</div>
+
+</div>
+
+</div>
+
+
+<footer>
+© 2026 IRONPULSE
+</footer>
+
+
+<script>
+
+let quantity = 1;
+
+let selectedColour = "Black";
+
+let basket =
+JSON.parse(localStorage.getItem("ironpulseBasket")) || [];
+
+
+/* LOAD IMAGES */
+
+async function loadImages() {
+
+  const response = await fetch(
+    "https://api.github.com/repos/IronPulseUK/IronPulseV/contents/assets"
+  );
+
+  const files = await response.json();
+
+  const images = files
+    .filter(file =>
+      file.type === "file" &&
+      /^Screenshot_20260927_.*\.(jpg|jpeg|png|webp)$/i.test(file.name)
+    )
+    .sort((a,b) =>
+      a.name.localeCompare(b.name)
+    );
+
+  const mainImage =
+    document.getElementById("mainImage");
+
+  const thumbnails =
+    document.getElementById("thumbnails");
+
+  if (images.length > 0) {
+
+    mainImage.src =
+      images[0].download_url;
+
+    images.forEach(file => {
+
+      const img =
+        document.createElement("img");
+
+      img.src =
+        file.download_url;
+
+      img.onclick = function() {
+
+        mainImage.src =
+          file.download_url;
+
+      };
+
+      thumbnails.appendChild(img);
+
+    });
+
+  }
+
+}
+
+
+/* COLOUR */
+
+function selectColour(colour, button) {
+
+  selectedColour = colour;
+
+  document.getElementById("selectedColour").textContent =
+    "Selected: " + colour;
+
+  document.querySelectorAll(".colour-button")
+    .forEach(btn =>
+      btn.classList.remove("active")
+    );
+
+  button.classList.add("active");
+
+}
+
+
+/* QUANTITY */
+
+function changeQuantity(amount) {
+
+  quantity += amount;
+
+  if (quantity < 1) {
+    quantity = 1;
+  }
+
+  document.getElementById("quantity").textContent =
+    quantity;
+
+}
+
+
+/* BASKET */
+
+function addToBasket() {
+
+  basket.push({
+
+    product:
+      "EVO Fitness Weightlifting Wrist Wraps",
+
+    price: 14.95,
+
+    quantity: quantity,
+
+    colour: selectedColour
+
+  });
+
+  localStorage.setItem(
+    "ironpulseBasket",
+    JSON.stringify(basket)
+  );
+
+  updateBasketCount();
+
+  document.getElementById("message")
+    .style.display = "block";
+
+  setTimeout(() => {
+
+    document.getElementById("message")
+      .style.display = "none";
+
+  }, 2000);
+
+}
+
+
+/* BASKET COUNT */
+
+function updateBasketCount() {
+
+  let count = 0;
+
+  basket.forEach(item => {
+
+    count += item.quantity;
+
+  });
+
+  document.getElementById("basketCount")
+    .textContent = count;
+
+}
+
+
+updateBasketCount();
+
+loadImages();
+
+</script>
+
+</body>
+</html>
