@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ergonomic Tricep Rope | IRONPULSE</title>
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #080808;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background: #000;
+  padding: 16px;
+  border-bottom: 1px solid #222;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 150px;
+  max-width: 55%;
+}
+
+.basket {
+  background: #e00000;
+  color: #fff;
+  padding: 11px 16px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 25px 18px 60px;
+}
+
+.product {
+  background: #111;
+  border: 1px solid #242424;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.main-image {
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  background: #080808;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 32px;
+  margin: 25px 0 10px;
+}
+
+.description {
+  color: #ccc;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.price {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.gallery-title {
+  font-size: 25px;
+  margin-top: 35px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 240px;
+  object-fit: contain;
+  background: #080808;
+  border-radius: 10px;
+  border: 1px solid #222;
+}
+
+.quantity-area {
+  margin-top: 25px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.quantity button {
+  width: 42px;
+  height: 42px;
+  background: #222;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 6px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.quantity span {
+  min-width: 30px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.button-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.add-button,
+.checkout-button {
+  flex: 1;
+  padding: 16px 10px;
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.add-button {
+  background: #e00000;
+  color: white;
+  border: none;
+}
+
+.add-button:hover {
+  background: #b00000;
+}
+
+.checkout-button {
+  background: #222;
+  color: white;
+  border: 1px solid #444;
+}
+
+.checkout-button:hover {
+  background: #333;
+}
+
+.message {
+  display: none;
+  text-align: center;
+  margin-top: 15px;
+  color: #6cff6c;
+  font-weight: bold;
+}
+
+.back {
+  display: block;
+  text-align: center;
+  color: #aaa;
+  margin-top: 25px;
+}
+
+footer {
+  text-align: center;
+  padding: 35px 20px;
+  border-top: 1px solid #222;
+  color: #777;
+  margin-top: 50px;
+}
+
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 27px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery img {
+    height: auto;
+    max-height: 450px;
+  }
+
+  .button-row {
+    flex-direction: column;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<a href="index.html">
+
+<img
+class="logo"
+src="assets/ironpulse-brand.jpg"
+alt="IRONPULSE">
+
+</a>
+
+<a
+href="checkout.html"
+class="basket">
+
+🛒 Basket / Checkout
+(<span id="basketCount">0</span>)
+
+</a>
+
+</header>
+
+
+<div class="container">
+
+<section class="product">
+
+
+<img
+class="main-image"
+src="assets/product-features.jpg"
+alt="IRONPULSE Ergonomic Tricep Rope">
+
+
+<h1>
+IRONPULSE Ergonomic Tricep Rope Attachment
+</h1>
+
+
+<p class="description">
+
+Upgrade your cable training with the
+IRONPULSE Ergonomic Tricep Rope Attachment.
+
+Featuring braided rope construction and
+molded ergonomic handles designed to provide
+a secure and comfortable grip during cable exercises.
+
+Ideal for tricep pushdowns and other cable
+training movements.
+
+</p>
+
+
+<div class="price">
+£24.99
+</div>
+
+
+<h2 class="gallery-title">
+Product Gallery
+</h2>
+
+
+<div class="gallery">
+
+<img
+src="assets/product-uk-stock.webp"
+alt="IRONPULSE Tricep Rope">
+
+<img
+src="assets/product-action-2.webp"
+alt="IRONPULSE Tricep Rope in use">
+
+<img
+src="assets/product-training.jpg"
+alt="IRONPULSE Tricep Rope training">
+
+<img
+src="assets/product-size.jpg"
+alt="IRONPULSE Tricep Rope size">
+
+<img
+src="assets/product-features.jpg"
+alt="IRONPULSE Tricep Rope features">
+
+<img
+src="assets/product-action.png"
+alt="IRONPULSE Tricep Rope">
+
+</div>
+
+
+<div class="quantity-area">
+
+<strong>
+Quantity
+</strong>
+
+<div class="quantity">
+
+<button
+onclick="changeQuantity(-1)">
+−
+</button>
+
+<span id="quantity">
+1
+</span>
+
+<button
+onclick="changeQuantity(1)">
++
+</button>
+
+</div>
+
+</div>
+
+
+<div class="button-row">
+
+<button
+class="add-button"
+onclick="addToBasket()">
+
+Add to Basket
+
+</button>
+
+<a
+href="checkout.html"
+class="checkout-button">
+
+Basket / Checkout
+
+</a>
+
+</div>
+
+
+<div
+id="message"
+class="message">
+
+✓ Added to basket
+
+</div>
+
+
+</section>
+
+</div>
+
+
+<footer>
+
+© 2026 IRONPULSE
+
+</footer>
+
+
+<script>
+
+let quantity = 1;
+
+
+let basket =
+JSON.parse(localStorage.getItem("ironpulseBasket")) || [];
+
+
+function changeQuantity(amount) {
+
+  quantity += amount;
+
+  if (quantity < 1) {
+
+    quantity = 1;
+
+  }
+
+  document.getElementById("quantity")
+    .textContent = quantity;
+
+}
+
+
+function addToBasket() {
+
+  const item = {
+
+    product:
+      "IRONPULSE Ergonomic Tricep Rope",
+
+    price: 24.99,
+
+    quantity: quantity,
+
+    colour: "Black"
+
+  };
+
+
+  basket.push(item);
+
+
+  localStorage.setItem(
+    "ironpulseBasket",
+    JSON.stringify(basket)
+  );
+
+
+  updateBasketCount();
+
+
+  const message =
+    document.getElementById("message");
+
+  message.style.display = "block";
+
+
+  setTimeout(function() {
+
+    message.style.display = "none";
+
+  }, 2000);
+
+}
+
+
+function updateBasketCount() {
+
+  let count = 0;
+
+
+  basket.forEach(function(item) {
+
+    count += item.quantity;
+
+  });
+
+
+  document.getElementById("basketCount")
+    .textContent = count;
+
+}
+
+
+updateBasketCount();
+
+</script>
+
+</body>
+</html>
