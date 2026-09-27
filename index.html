@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>IRONPULSE | Fitness Equipment</title>
+<title>IRONPULSE | Premium Fitness Equipment</title>
+
+<meta name="description"
+content="IRONPULSE — premium gym accessories and fitness equipment for serious training.">
 
 <style>
 
@@ -13,17 +15,29 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background: #080808;
   color: #fff;
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+/* HEADER */
+
 header {
-  background: #000;
-  padding: 16px;
-  border-bottom: 1px solid #222;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(0,0,0,0.96);
+  border-bottom: 1px solid #252525;
+
+  padding: 14px 20px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -32,163 +46,191 @@ header {
 .logo {
   width: 150px;
   max-width: 55%;
+  display: block;
 }
 
 .basket {
   background: #e00000;
   color: #fff;
+
   padding: 11px 16px;
+
   border-radius: 7px;
+
   text-decoration: none;
   font-weight: bold;
+
+  transition: 0.2s;
 }
 
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 25px 18px 60px;
+.basket:hover {
+  background: #b80000;
+  transform: translateY(-1px);
 }
+
+/* MAIN */
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: auto;
+
+  padding: 25px 18px 70px;
+}
+
+/* HERO */
 
 .hero {
   text-align: center;
-  padding: 10px 0 35px;
+  padding: 20px 0 45px;
 }
 
 .hero img {
   width: 100%;
-  max-width: 650px;
-  border-radius: 12px;
+  max-width: 700px;
+
+  border-radius: 14px;
+
+  display: block;
+  margin: auto;
+
+  box-shadow: 0 15px 50px rgba(0,0,0,0.5);
 }
 
 .hero h1 {
-  font-size: 42px;
-  margin: 20px 0 8px;
+  font-size: clamp(36px, 7vw, 58px);
+
+  margin: 25px 0 8px;
+
+  letter-spacing: 3px;
 }
 
 .hero p {
-  color: #bbb;
-  font-size: 18px;
+  color: #aaa;
+  font-size: 19px;
+  margin: 0;
 }
+
+/* SECTION TITLES */
+
+.section-title {
+  font-size: 32px;
+  margin: 20px 0 22px;
+}
+
+/* PRODUCTS */
 
 .products {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
+  gap: 24px;
 }
 
 .product {
-  background: #111;
-  border: 1px solid #242424;
-  border-radius: 14px;
+  background: linear-gradient(145deg, #131313, #0d0d0d);
+
+  border: 1px solid #282828;
+
+  border-radius: 15px;
+
   padding: 20px;
+
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.product:hover {
+  transform: translateY(-3px);
+  border-color: #444;
 }
 
 .product-image {
   width: 100%;
   height: 300px;
+
   object-fit: contain;
-  background: #080808;
-  border-radius: 10px;
+
+  background: #050505;
+
+  border-radius: 11px;
+
+  display: block;
 }
 
 .product h2 {
   font-size: 25px;
-  margin: 18px 0 10px;
+  line-height: 1.25;
+
+  margin: 20px 0 10px;
 }
 
 .description {
-  color: #ccc;
-  line-height: 1.6;
+  color: #c3c3c3;
+  line-height: 1.65;
+  font-size: 15px;
 }
 
 .price {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: bold;
-  margin: 18px 0;
+
+  margin: 20px 0;
+
+  color: #fff;
 }
 
-.button-row {
-  display: flex;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.add-button,
-.checkout-button {
-  flex: 1;
-  padding: 14px 10px;
-  border-radius: 7px;
-  font-size: 15px;
-  font-weight: bold;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-}
-
-.add-button {
-  background: #e00000;
-  color: white;
-  border: none;
-}
-
-.add-button:hover {
-  background: #b00000;
-}
-
-.checkout-button {
-  background: #222;
-  color: white;
-  border: 1px solid #444;
-}
-
-.checkout-button:hover {
-  background: #333;
-}
-
-.message {
-  display: none;
-  text-align: center;
-  margin-top: 12px;
-  color: #6cff6c;
-  font-weight: bold;
-}
+/* OPTIONS */
 
 .quantity-area {
   margin-top: 20px;
+}
+
+.quantity-area strong,
+.colours strong {
+  display: block;
+  margin-bottom: 10px;
 }
 
 .quantity {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-top: 10px;
 }
 
 .quantity button {
   width: 42px;
   height: 42px;
-  background: #222;
+
+  background: #202020;
   color: white;
+
   border: 1px solid #444;
   border-radius: 6px;
+
   font-size: 22px;
+
   cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.quantity button:hover {
+  background: #333;
 }
 
 .quantity span {
-  min-width: 30px;
+  min-width: 32px;
+
   text-align: center;
+
   font-size: 20px;
   font-weight: bold;
 }
 
+/* COLOURS */
+
 .colours {
   margin-top: 20px;
-}
-
-.colours strong {
-  display: block;
-  margin-bottom: 10px;
 }
 
 .colour-buttons {
@@ -200,10 +242,20 @@ header {
 .colour-button {
   background: #181818;
   color: white;
+
   border: 1px solid #444;
+
   padding: 10px 13px;
+
   border-radius: 7px;
+
   cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.colour-button:hover {
+  background: #262626;
 }
 
 .colour-button.active {
@@ -211,46 +263,167 @@ header {
   background: #252525;
 }
 
-.section-title {
-  font-size: 30px;
-  margin-top: 55px;
-  margin-bottom: 18px;
+.selected-colour {
+  color: #aaa;
+  font-size: 14px;
+  margin-top: 10px;
 }
+
+/* BUTTONS */
+
+.button-row {
+  display: flex;
+  gap: 10px;
+
+  margin-top: 22px;
+}
+
+.add-button,
+.checkout-button {
+  flex: 1;
+
+  padding: 14px 10px;
+
+  border-radius: 7px;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  text-align: center;
+  text-decoration: none;
+
+  transition: 0.2s;
+}
+
+.add-button {
+  background: #e00000;
+  color: white;
+  border: none;
+}
+
+.add-button:hover {
+  background: #b80000;
+}
+
+.checkout-button {
+  background: #222;
+  color: white;
+
+  border: 1px solid #444;
+}
+
+.checkout-button:hover {
+  background: #333;
+}
+
+/* MESSAGE */
+
+.message {
+  display: none;
+
+  text-align: center;
+
+  margin-top: 13px;
+
+  color: #62ff62;
+
+  font-weight: bold;
+}
+
+/* FEATURES */
 
 .features {
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
+
   gap: 15px;
 }
 
 .feature {
   background: #111;
-  padding: 18px;
-  border-radius: 10px;
-  border: 1px solid #222;
+
+  padding: 20px;
+
+  border-radius: 11px;
+
+  border: 1px solid #252525;
 }
 
 .feature h3 {
   margin-top: 0;
+  font-size: 18px;
 }
 
 .feature p {
   color: #aaa;
-  line-height: 1.5;
+  line-height: 1.55;
+  margin-bottom: 0;
 }
+
+/* TRUST BAR */
+
+.trust-bar {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 10px;
+
+  margin: 45px 0 10px;
+
+  text-align: center;
+}
+
+.trust-item {
+  background: #101010;
+
+  border: 1px solid #222;
+
+  border-radius: 9px;
+
+  padding: 15px;
+
+  color: #ccc;
+
+  font-size: 14px;
+}
+
+/* FOOTER */
 
 footer {
   text-align: center;
+
   padding: 40px 20px;
+
   border-top: 1px solid #222;
+
   color: #777;
+
   margin-top: 50px;
 }
 
+footer strong {
+  color: #aaa;
+}
+
+/* MOBILE */
+
 @media (max-width: 700px) {
 
-  .hero h1 {
-    font-size: 34px;
+  header {
+    padding: 12px;
+  }
+
+  .logo {
+    width: 125px;
+  }
+
+  .basket {
+    padding: 9px 11px;
+    font-size: 13px;
   }
 
   .products {
@@ -258,6 +431,10 @@ footer {
   }
 
   .features {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-bar {
     grid-template-columns: 1fr;
   }
 
@@ -272,42 +449,41 @@ footer {
 }
 
 </style>
-
 </head>
 
+
 <body>
+
+
+<!-- HEADER -->
 
 <header>
 
 <a href="index.html">
-
 <img
 class="logo"
 src="assets/ironpulse-brand.jpg"
 alt="IRONPULSE">
-
 </a>
 
-<a
-href="checkout.html"
-class="basket">
-
+<a href="checkout.html" class="basket">
 🛒 Basket / Checkout
 (<span id="basketCount">0</span>)
-
 </a>
 
 </header>
 
 
-<div class="container">
+<main class="container">
 
+
+<!-- HERO -->
 
 <section class="hero">
 
 <img
 src="assets/ironpulse-brand.jpg"
-alt="IRONPULSE">
+alt="IRONPULSE Premium Fitness Equipment">
 
 <h1>IRONPULSE</h1>
 
@@ -320,6 +496,11 @@ Premium fitness equipment for serious training.
 
 <!-- PRODUCTS -->
 
+<h2 class="section-title">
+Featured Equipment
+</h2>
+
+
 <div class="products">
 
 
@@ -330,20 +511,19 @@ Premium fitness equipment for serious training.
 <img
 class="product-image"
 src="assets/product-features.jpg"
-alt="IRONPULSE Ergonomic Tricep Rope">
+alt="IRONPULSE Ergonomic Tricep Rope Attachment">
 
 <h2>
-Ergonomic Tricep Rope Attachment
+IRONPULSE Ergonomic Tricep Rope Attachment
 </h2>
 
 <p class="description">
-
 Upgrade your cable training with the
 IRONPULSE Ergonomic Tricep Rope Attachment.
 
 Braided rope construction with ergonomic
-handles designed for a secure and comfortable grip.
-
+handles designed to provide a secure and
+comfortable grip during hard training sessions.
 </p>
 
 <div class="price">
@@ -358,15 +538,15 @@ handles designed for a secure and comfortable grip.
 <div class="quantity">
 
 <button
+type="button"
 onclick="changeQuantity('rope', -1)">
 −
 </button>
 
-<span id="ropeQuantity">
-1
-</span>
+<span id="ropeQuantity">1</span>
 
 <button
+type="button"
 onclick="changeQuantity('rope', 1)">
 +
 </button>
@@ -379,6 +559,7 @@ onclick="changeQuantity('rope', 1)">
 <div class="button-row">
 
 <button
+type="button"
 class="add-button"
 onclick="addToBasket('rope')">
 
@@ -408,7 +589,7 @@ class="message">
 </section>
 
 
-<!-- EVO WRAPS -->
+<!-- WRIST WRAPS -->
 
 <section class="product">
 
@@ -422,19 +603,20 @@ EVO Fitness Weightlifting Wrist Wraps
 </h2>
 
 <p class="description">
-
 Heavy-duty wrist support wraps designed for
-weightlifting, bodybuilding, powerlifting and strength training.
+weightlifting, bodybuilding, powerlifting and
+strength training.
 
 Featuring an attached thumb loop, blended cotton
 material and adjustable hook-and-loop straps.
-
 </p>
 
 <div class="price">
 £14.95
 </div>
 
+
+<!-- COLOURS -->
 
 <div class="colours">
 
@@ -445,49 +627,43 @@ Choose your colour:
 <div class="colour-buttons">
 
 <button
+type="button"
 class="colour-button active"
 onclick="selectColour('Black', this)">
-
 Black
-
 </button>
 
 <button
+type="button"
 class="colour-button"
 onclick="selectColour('Red', this)">
-
 Red
-
 </button>
 
 <button
+type="button"
 class="colour-button"
 onclick="selectColour('Green', this)">
-
 Green
-
 </button>
 
 <button
+type="button"
 class="colour-button"
 onclick="selectColour('Camo Green', this)">
-
 Camo Green
-
 </button>
 
 </div>
 
-<p
-id="selectedColour"
-style="color:#aaa;">
-
+<p id="selectedColour" class="selected-colour">
 Selected: Black
-
 </p>
 
 </div>
 
+
+<!-- QUANTITY -->
 
 <div class="quantity-area">
 
@@ -496,15 +672,15 @@ Selected: Black
 <div class="quantity">
 
 <button
+type="button"
 onclick="changeQuantity('wraps', -1)">
 −
 </button>
 
-<span id="wrapQuantity">
-1
-</span>
+<span id="wrapQuantity">1</span>
 
 <button
+type="button"
 onclick="changeQuantity('wraps', 1)">
 +
 </button>
@@ -517,6 +693,7 @@ onclick="changeQuantity('wraps', 1)">
 <div class="button-row">
 
 <button
+type="button"
 class="add-button"
 onclick="addToBasket('wraps')">
 
@@ -548,20 +725,42 @@ class="message">
 </div>
 
 
+<!-- TRUST -->
+
+<div class="trust-bar">
+
+<div class="trust-item">
+🔒 Secure Checkout
+</div>
+
+<div class="trust-item">
+🇬🇧 UK Stock
+</div>
+
+<div class="trust-item">
+💪 Built For Training
+</div>
+
+</div>
+
+
 <!-- WHY IRONPULSE -->
 
 <h2 class="section-title">
 Why IRONPULSE?
 </h2>
 
+
 <div class="features">
+
 
 <div class="feature">
 
 <h3>💪 Serious Training</h3>
 
 <p>
-Equipment selected for people who take their training seriously.
+Equipment selected for people who take
+their training seriously.
 </p>
 
 </div>
@@ -572,7 +771,8 @@ Equipment selected for people who take their training seriously.
 <h3>🇬🇧 UK Stock</h3>
 
 <p>
-Products available from UK stock.
+Products available from UK stock,
+helping keep delivery simple.
 </p>
 
 </div>
@@ -583,24 +783,39 @@ Products available from UK stock.
 <h3>🔥 Quality Equipment</h3>
 
 <p>
-Practical gym equipment designed for everyday training.
+Practical gym equipment designed for
+everyday training.
 </p>
 
 </div>
 
-</div>
 
 </div>
+
+
+</main>
 
 
 <footer>
 
-© 2026 IRONPULSE
+<strong>IRONPULSE</strong>
+
+<br><br>
+
+Premium fitness equipment for serious training.
+
+<br><br>
+
+© 2026 IRONPULSE. All rights reserved.
 
 </footer>
 
 
 <script>
+
+/* =========================================
+   IRONPULSE BASKET
+========================================= */
 
 let basket =
 JSON.parse(localStorage.getItem("ironpulseBasket")) || [];
@@ -615,9 +830,12 @@ let quantities = {
 };
 
 
-let selectedColour =
-"Black";
+let selectedColour = "Black";
 
+
+/* =========================================
+   QUANTITY
+========================================= */
 
 function changeQuantity(product, amount) {
 
@@ -648,10 +866,13 @@ function changeQuantity(product, amount) {
 }
 
 
+/* =========================================
+   COLOUR
+========================================= */
+
 function selectColour(colour, button) {
 
   selectedColour = colour;
-
 
   document.getElementById("selectedColour")
     .textContent = "Selected: " + colour;
@@ -671,6 +892,10 @@ function selectColour(colour, button) {
 }
 
 
+/* =========================================
+   ADD TO BASKET
+========================================= */
+
 function addToBasket(product) {
 
   let item;
@@ -681,7 +906,7 @@ function addToBasket(product) {
     item = {
 
       product:
-        "IRONPULSE Ergonomic Tricep Rope",
+        "IRONPULSE Ergonomic Tricep Rope Attachment",
 
       price: 24.99,
 
@@ -732,10 +957,15 @@ function addToBasket(product) {
 }
 
 
+/* =========================================
+   MESSAGE
+========================================= */
+
 function showMessage(id) {
 
   const message =
     document.getElementById(id);
+
 
   message.style.display = "block";
 
@@ -749,6 +979,10 @@ function showMessage(id) {
 }
 
 
+/* =========================================
+   BASKET COUNT
+========================================= */
+
 function updateBasketCount() {
 
   let count = 0;
@@ -756,7 +990,7 @@ function updateBasketCount() {
 
   basket.forEach(function(item) {
 
-    count += item.quantity;
+    count += Number(item.quantity);
 
   });
 
@@ -766,6 +1000,10 @@ function updateBasketCount() {
 
 }
 
+
+/* =========================================
+   STARTUP
+========================================= */
 
 updateBasketCount();
 
