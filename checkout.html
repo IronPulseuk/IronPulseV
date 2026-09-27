@@ -1,48 +1,456 @@
-<!doctype html>
-<html lang="en-GB">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Basket — IRONPULSE</title><link rel="stylesheet" href="styles.css">
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Basket & Checkout | IRONPULSE</title>
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #080808;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background: #000;
+  padding: 18px;
+  text-align: center;
+  border-bottom: 1px solid #222;
+}
+
+.logo {
+  width: 170px;
+  max-width: 80%;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 30px 18px 60px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 20px;
+}
+
+.basket-item {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #292929;
+}
+
+.basket-item:last-child {
+  border-bottom: none;
+}
+
+.basket-item img {
+  width: 95px;
+  height: 95px;
+  object-fit: contain;
+  background: #080808;
+  border-radius: 8px;
+}
+
+.item-info {
+  flex: 1;
+}
+
+.item-info h2 {
+  margin: 0 0 8px;
+  font-size: 19px;
+}
+
+.item-info p {
+  margin: 4px 0;
+  color: #aaa;
+}
+
+.item-price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.remove {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.remove:hover {
+  background: #b00000;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: bold;
+  padding-top: 20px;
+  margin-top: 15px;
+  border-top: 1px solid #333;
+}
+
+label {
+  display: block;
+  margin: 16px 0 7px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 13px;
+  background: #080808;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  background: #e00000;
+  color: white;
+  text-align: center;
+  padding: 17px;
+  border: none;
+  border-radius: 7px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 22px;
+}
+
+.button:hover {
+  background: #b00000;
+}
+
+.note {
+  color: #999;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.back {
+  display: block;
+  text-align: center;
+  color: #aaa;
+  margin-top: 25px;
+}
+
+.empty {
+  text-align: center;
+  color: #aaa;
+  padding: 30px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  border-top: 1px solid #222;
+  color: #777;
+}
+
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .basket-item {
+    align-items: flex-start;
+  }
+
+  .basket-item img {
+    width: 80px;
+    height: 80px;
+  }
+
+}
+
+</style>
+
 </head>
+
 <body>
-<header class="site-header">
-<a class="brand" href="index.html"><span class="brand-mark">IP</span><span>IRON<span>PULSE</span></span></a>
-<nav class="nav"><a href="index.html#product">Continue shopping</a></nav>
+
+<header>
+
+<a href="index.html">
+
+<img
+class="logo"
+src="assets/ironpulse-brand.jpg"
+alt="IRONPULSE">
+
+</a>
+
 </header>
-<main class="checkout-page">
-  <div class="section-label">YOUR BASKET</div>
-  <h1>Checkout</h1>
-  <div class="checkout-grid">
-    <section class="checkout-card">
-      <div id="basket-empty" class="empty-state">
-        <h2>Your basket is empty.</h2><p>Add an IRONPULSE attachment first.</p><a class="btn btn-primary" href="index.html#product">Shop IRONPULSE</a>
-      </div>
-      <div id="basket-filled" hidden>
-        <div class="basket-item">
-          <div class="mini-product"></div>
-          <div><strong>IRONPULSE Cable Rope Attachment</strong><p>£24.99 each</p></div>
-          <div class="qty"><button data-qty="-1">−</button><span id="checkout-qty">1</span><button data-qty="1">+</button></div>
+
+
+<div class="container">
+
+<h1>🛒 Your Basket</h1>
+
+
+<div class="card">
+
+<div id="basketItems"></div>
+
+<div class="total">
+
+<span>Total</span>
+
+<span id="basketTotal">£0.00</span>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>Your Details</h2>
+
+<p style="color:#aaa;">
+Please enter your details before continuing to payment.
+</p>
+
+
+<label for="name">
+Full name
+</label>
+
+<input
+type="text"
+id="name"
+placeholder="Your full name">
+
+
+<label for="email">
+Email address
+</label>
+
+<input
+type="email"
+id="email"
+placeholder="Your email address">
+
+
+<label for="address">
+Delivery address
+</label>
+
+<textarea
+id="address"
+placeholder="House number, street, town/city, postcode"></textarea>
+
+
+<a
+class="button"
+href="https://monzo.com/pay/r/ignite-fitness-coaching_f6RvJFebjwKOjb"
+target="_blank"
+rel="noopener">
+
+Continue to payment
+
+</a>
+
+
+<p class="note">
+
+Your basket total is shown above.
+You will be taken to the secure payment page to complete your payment.
+
+</p>
+
+</div>
+
+
+<a
+class="back"
+href="index.html">
+
+← Continue shopping
+
+</a>
+
+</div>
+
+
+<footer>
+
+© 2026 IRONPULSE
+
+</footer>
+
+
+<script>
+
+let basket =
+JSON.parse(localStorage.getItem("ironpulseBasket")) || [];
+
+
+function displayBasket() {
+
+  const container =
+    document.getElementById("basketItems");
+
+  const totalElement =
+    document.getElementById("basketTotal");
+
+
+  container.innerHTML = "";
+
+
+  if (basket.length === 0) {
+
+    container.innerHTML =
+      '<div class="empty">Your basket is empty.</div>';
+
+    totalElement.textContent = "£0.00";
+
+    return;
+
+  }
+
+
+  let total = 0;
+
+
+  basket.forEach(function(item, index) {
+
+    const itemTotal =
+      item.price * item.quantity;
+
+    total += itemTotal;
+
+
+    let image =
+      "assets/product-features.jpg";
+
+
+    if (
+      item.product &&
+      item.product.includes("EVO")
+    ) {
+
+      image =
+        "assets/Screenshot_20260927_171119_com_amazon_mShop_android_shopping_MainActivity.jpg";
+
+    }
+
+
+    const div =
+      document.createElement("div");
+
+    div.className =
+      "basket-item";
+
+
+    div.innerHTML = `
+
+      <img
+        src="${image}"
+        alt="${item.product}">
+
+      <div class="item-info">
+
+        <h2>${item.product}</h2>
+
+        <p>
+          Quantity: ${item.quantity}
+        </p>
+
+        ${
+          item.colour
+          ?
+          `<p>Colour: ${item.colour}</p>`
+          :
+          ""
+        }
+
+        <div class="item-price">
+          £${itemTotal.toFixed(2)}
         </div>
-        <div class="total-row"><span>Subtotal</span><strong id="subtotal">£24.99</strong></div>
-        <div class="total-row"><span>Delivery</span><span>Set by your store policy</span></div>
-        <div class="total-row grand"><span>Total</span><strong id="total">£24.99</strong></div>
+
+        <button
+          class="remove"
+          onclick="removeItem(${index})">
+
+          Remove
+
+        </button>
+
       </div>
-    </section>
-    <section class="checkout-card">
-      <h2>Customer details</h2>
-      <p class="notice"><strong> This page does not process card payments yet.</p>
-      <form id="order-form">
-        <label>Full name<input required name="name" autocomplete="name"></label>
-        <label>Email<input required type="email" name="email" autocomplete="email"></label>
-        <label>Phone<input name="phone" autocomplete="tel"></label>
-        <label>Delivery address<textarea required name="address" rows="4" autocomplete="street-address"></textarea></label>
-        <button class="btn btn-primary" type="submit">Continue to payment</button>
-      </form>
-      <p class="small-note">Payment is hosted securely by Monzo.</p>
-    </section>
-  </div>
-</main>
-<footer class="footer"><div class="footer-brand">IRONPULSE</div><p>Replace placeholder contact, delivery and business details before launch.</p></footer>
-<script src="script.js"></script>
+
+    `;
+
+
+    container.appendChild(div);
+
+  });
+
+
+  totalElement.textContent =
+    "£" + total.toFixed(2);
+
+}
+
+
+function removeItem(index) {
+
+  basket.splice(index, 1);
+
+  localStorage.setItem(
+    "ironpulseBasket",
+    JSON.stringify(basket)
+  );
+
+  displayBasket();
+
+}
+
+
+displayBasket();
+
+</script>
+
 </body>
 </html>
