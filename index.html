@@ -71,7 +71,6 @@
       place-items:center;
       border-radius:9px;
       font-size:14px;
-      letter-spacing:0;
     }
 
     .nav{
@@ -102,12 +101,6 @@
       background:var(--accent);
       color:#080909;
       font-weight:800;
-    }
-
-    .wrap{
-      max-width:var(--max);
-      margin:auto;
-      padding:0 24px;
     }
 
     .hero{
@@ -155,10 +148,13 @@
       background:#111;
     }
 
+    /* FULL LOGO VISIBLE — NO CROPPING */
     .hero-photo img{
       width:100%;
       aspect-ratio:1/1;
-      object-fit:cover;
+      object-fit:contain;
+      padding:12px;
+      background:#111;
     }
 
     .photo-tag{
@@ -473,10 +469,6 @@
       gap:25px;
     }
 
-    .cta h2{
-      margin-bottom:0;
-    }
-
     footer{
       border-top:1px solid var(--line);
       padding:35px 24px;
@@ -491,10 +483,6 @@
       flex-wrap:wrap;
       margin:15px 0;
       font-size:13px;
-    }
-
-    .footer-links a:hover{
-      color:var(--accent);
     }
 
     @media(max-width:800px){
@@ -576,12 +564,14 @@
     <a href="#product">Product</a>
     <a href="#features">Features</a>
     <a href="#faq">FAQ</a>
+
     <a class="nav-cart" href="checkout.html">
       Basket <span id="cart-count">0</span>
     </a>
   </nav>
 
 </header>
+
 
 <main>
 
@@ -624,9 +614,10 @@
 
     </div>
 
-    <div class="hero-photo">
 
-      <!-- YOUR COMPANY/BRAND IMAGE IS THE FIRST MAIN IMAGE -->
+    <!-- FIRST IMAGE = YOUR COMPANY LOGO -->
+
+    <div class="hero-photo">
 
       <img
         src="assets/ironpulse-brand.jpg"
@@ -733,9 +724,10 @@
 
         </ul>
 
+
         <div class="buy-box">
 
-          <div class="qty" aria-label="Quantity">
+          <div class="qty">
 
             <button
               type="button"
@@ -792,9 +784,7 @@
 
         <article class="feature-card">
 
-          <span class="feature-num">
-            01
-          </span>
+          <span class="feature-num">01</span>
 
           <h3>
             Ergonomic grip
@@ -809,9 +799,7 @@
 
         <article class="feature-card">
 
-          <span class="feature-num">
-            02
-          </span>
+          <span class="feature-num">02</span>
 
           <h3>
             Braided rope
@@ -826,9 +814,7 @@
 
         <article class="feature-card">
 
-          <span class="feature-num">
-            03
-          </span>
+          <span class="feature-num">03</span>
 
           <h3>
             One attachment, many movements
@@ -847,7 +833,7 @@
   </section>
 
 
-  <!-- REAL PRODUCT PHOTOS -->
+  <!-- PRODUCT PHOTOS -->
 
   <section class="section">
 
@@ -977,9 +963,7 @@
 
       <article class="movement-card">
 
-        <span class="movement-num">
-          01
-        </span>
+        <span class="movement-num">01</span>
 
         <h3>
           Tricep pushdown
@@ -994,9 +978,7 @@
 
       <article class="movement-card">
 
-        <span class="movement-num">
-          02
-        </span>
+        <span class="movement-num">02</span>
 
         <h3>
           Overhead extension
@@ -1011,9 +993,7 @@
 
       <article class="movement-card">
 
-        <span class="movement-num">
-          03
-        </span>
+        <span class="movement-num">03</span>
 
         <h3>
           Cable curl
@@ -1028,9 +1008,7 @@
 
       <article class="movement-card">
 
-        <span class="movement-num">
-          04
-        </span>
+        <span class="movement-num">04</span>
 
         <h3>
           Other cable movements
@@ -1117,3 +1095,45 @@
       <summary>
         What exercises can I use it for?
       </summary>
+
+      <p>
+        It can be used for compatible cable exercises including tricep pushdowns, overhead extensions and cable curls. Other movements may also be possible depending on your cable machine and setup.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>
+        Will it fit my cable machine?
+      </summary>
+
+      <p>
+        Compatibility depends on the connector and cable system. Check your machine's attachment point and make sure the connection is secure before use.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>
+        What colour is it?
+      </summary>
+
+      <p>
+        Black, as shown in the product photographs.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>
+        When will my order be dispatched?
+      </summary>
+
+      <p>
+        Orders are supplied from UK stock. Dispatch and delivery time depend on the delivery service and destination. Please check the
