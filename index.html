@@ -1,1139 +1,247 @@
-<!doctype html>
-<html lang="en-GB">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="IRONPULSE ergonomic tricep cable rope attachment. Black braided rope with molded ergonomic handles.">
-  <title>IRONPULSE — Ergonomic Tricep Cable Rope</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IRONPULSE | Premium Fitness Equipment</title>
 
   <style>
-    :root{
-      --bg:#080909;
-      --panel:#111313;
-      --text:#f5f5f2;
-      --muted:#a7aaa8;
-      --line:#2a2d2c;
-      --accent:#caff19;
-      --max:1180px;
-    }
-
-    *{box-sizing:border-box}
-
-    html{scroll-behavior:smooth}
-
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--text);
-      font-family:Arial,Helvetica,sans-serif;
-      line-height:1.55;
-    }
-
-    a{
-      color:inherit;
-      text-decoration:none;
-    }
-
-    img{
-      display:block;
-      max-width:100%;
-      height:auto;
-    }
-
-    .site-header{
-      position:sticky;
-      top:0;
-      z-index:20;
-      background:rgba(8,9,9,.97);
-      border-bottom:1px solid var(--line);
-      padding:14px 5%;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      font-size:20px;
-      font-weight:900;
-      letter-spacing:2px;
-    }
-
-    .brand-mark{
-      width:38px;
-      height:38px;
-      background:var(--accent);
-      color:#050505;
-      display:grid;
-      place-items:center;
-      border-radius:9px;
-      font-size:14px;
-    }
-
-    .nav{
-      display:flex;
-      align-items:center;
-      gap:22px;
-      font-size:14px;
-      color:#ddd;
-    }
-
-    .nav a:hover{
-      color:var(--accent);
-    }
-
-    .nav-cart{
-      border:1px solid #444;
-      border-radius:30px;
-      padding:9px 15px;
-    }
-
-    #cart-count{
-      display:inline-grid;
-      place-items:center;
-      min-width:22px;
-      height:22px;
-      margin-left:5px;
-      border-radius:50%;
-      background:var(--accent);
-      color:#080909;
-      font-weight:800;
-    }
-
-    .hero{
-      max-width:var(--max);
-      margin:auto;
-      padding:55px 24px 45px;
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:42px;
-      align-items:center;
-    }
-
-    .eyebrow,
-    .section-label{
-      font-size:12px;
-      letter-spacing:2px;
-      text-transform:uppercase;
-      color:var(--accent);
-      font-weight:800;
-    }
-
-    h1{
-      font-size:clamp(42px,7vw,78px);
-      line-height:.94;
-      margin:14px 0 20px;
-      letter-spacing:-2px;
-    }
-
-    h1 em,
-    h2 em{
-      font-style:normal;
-      color:var(--accent);
-    }
-
-    .hero-text{
-      font-size:19px;
-      color:var(--muted);
-      max-width:580px;
-    }
-
-    .hero-photo{
-      border-radius:18px;
-      overflow:hidden;
-      border:1px solid var(--line);
-      background:#111;
-    }
-
-    /* FULL LOGO VISIBLE — NO CROPPING */
-    .hero-photo img{
-      width:100%;
-      aspect-ratio:1/1;
-      object-fit:contain;
-      padding:12px;
-      background:#111;
-    }
-
-    .photo-tag{
-      display:block;
-      padding:12px 15px;
-      font-size:11px;
-      letter-spacing:1.5px;
-      color:#aaa;
-    }
-
-    .hero-actions{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin:25px 0;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      border:0;
-      border-radius:9px;
-      padding:13px 20px;
-      font-weight:800;
-      cursor:pointer;
-    }
-
-    .btn-primary{
-      background:var(--accent);
-      color:#070807;
-    }
-
-    .btn-primary:hover{
-      background:#dcff5b;
-    }
-
-    .btn-ghost{
-      border:1px solid #555;
-      color:#fff;
-    }
-
-    .trust-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-      color:#c6c9c7;
-      font-size:13px;
-    }
 
-    .trust-row span{
-      border:1px solid var(--line);
-      padding:7px 10px;
-      border-radius:20px;
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #080808;
+      color: #fff;
+      line-height: 1.6;
     }
 
-    .section{
-      max-width:var(--max);
-      margin:auto;
-      padding:70px 24px;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    .dark-section{
-      max-width:none;
-      background:#0d0f0f;
-      border-top:1px solid var(--line);
-      border-bottom:1px solid var(--line);
+    header {
+      background: #050505;
+      border-bottom: 1px solid #222;
+      padding: 18px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
-    .dark-section > *{
-      max-width:var(--max);
-      margin-left:auto;
-      margin-right:auto;
+    .nav {
+      max-width: 1150px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    .product-grid{
-      display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:45px;
-      margin-top:22px;
+    .brand {
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: 2px;
     }
 
-    .main-photo{
-      border:1px solid var(--line);
-      border-radius:16px;
-      overflow:hidden;
-      background:#111;
+    .brand span {
+      color: #e00000;
     }
 
-    .main-photo img{
-      width:100%;
-      aspect-ratio:1/1;
-      object-fit:cover;
+    .cart {
+      background: #e00000;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-weight: 700;
     }
 
-    .gallery{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:10px;
-      margin-top:10px;
+    .hero {
+      max-width: 1150px;
+      margin: auto;
+      padding: 35px 20px 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
     }
 
-    .gallery img{
-      width:100%;
-      aspect-ratio:1/1;
-      object-fit:cover;
-      border-radius:10px;
-      border:1px solid var(--line);
+    .hero-photo {
+      background: #111;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid #222;
     }
 
-    h2{
-      font-size:clamp(32px,5vw,52px);
-      line-height:1.02;
-      margin:12px 0 16px;
+    .hero-photo img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      padding: 12px;
+      display: block;
+      background: #111;
     }
 
-    h3{
-      margin:8px 0;
-      font-size:20px;
+    .eyebrow {
+      color: #e00000;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
     }
 
-    .lead{
-      font-size:18px;
-      color:var(--muted);
+    h1 {
+      font-size: clamp(38px, 7vw, 70px);
+      line-height: 1;
+      margin-bottom: 20px;
     }
 
-    .price-line{
-      display:flex;
-      align-items:end;
-      gap:12px;
-      margin:22px 0 6px;
+    .hero p {
+      color: #bbb;
+      font-size: 18px;
+      margin-bottom: 25px;
     }
 
-    .price{
-      font-size:38px;
-      font-weight:900;
+    .price {
+      font-size: 34px;
+      font-weight: 900;
+      margin-bottom: 20px;
     }
 
-    .price-note{
-      color:#aeb1ae;
-      font-size:13px;
-      margin-bottom:7px;
+    .button {
+      display: inline-block;
+      background: #e00000;
+      color: #fff;
+      padding: 15px 25px;
+      border-radius: 7px;
+      font-weight: 800;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
     }
 
-    .stock{
-      color:var(--accent);
-      font-size:12px;
-      font-weight:800;
-      letter-spacing:1px;
-      margin:8px 0 20px;
+    .button:hover {
+      background: #b80000;
     }
 
-    .check-list{
-      padding:0;
-      margin:20px 0;
-      list-style:none;
+    section {
+      max-width: 1150px;
+      margin: auto;
+      padding: 60px 20px;
     }
 
-    .check-list li{
-      padding:11px 0;
-      border-bottom:1px solid var(--line);
-      color:#ddd;
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 35px;
     }
 
-    .check-list li:before{
-      content:"✓";
-      color:var(--accent);
-      font-weight:900;
-      margin-right:10px;
+    .product-card {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 14px;
+      overflow: hidden;
+      max-width: 850px;
+      margin: auto;
     }
 
-    .buy-box{
-      display:flex;
-      gap:12px;
-      align-items:center;
-      margin-top:22px;
+    .product-card img {
+      width: 100%;
+      display: block;
+      max-height: 600px;
+      object-fit: contain;
+      background: #080808;
     }
 
-    .qty{
-      display:flex;
-      align-items:center;
-      border:1px solid #555;
-      border-radius:9px;
-      overflow:hidden;
+    .product-info {
+      padding: 25px;
     }
 
-    .qty button{
-      width:42px;
-      height:46px;
-      background:#171919;
-      color:#fff;
-      border:0;
-      font-size:20px;
-      cursor:pointer;
+    .product-info h2 {
+      font-size: 28px;
+      margin-bottom: 12px;
     }
 
-    .qty span{
-      min-width:42px;
-      text-align:center;
-      font-weight:800;
+    .product-info p {
+      color: #bbb;
+      margin-bottom: 15px;
     }
 
-    .small-note{
-      font-size:12px;
-      color:#858a87;
-      margin-top:12px;
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 30px;
     }
 
-    .feature-grid,
-    .movement-grid,
-    .photo-grid,
-    .spec-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:16px;
-      margin-top:25px;
+    .feature {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 12px;
+      overflow: hidden;
     }
 
-    .feature-card,
-    .movement-card,
-    .spec-card{
-      background:var(--panel);
-      border:1px solid var(--line);
-      border-radius:14px;
-      padding:22px;
+    .feature img {
+      width: 100%;
+      height: 220px;
+      object-fit: contain;
+      background: #080808;
     }
 
-    .feature-num,
-    .movement-num{
-      color:var(--accent);
-      font-size:12px;
-      font-weight:900;
-      letter-spacing:1px;
+    .feature-content {
+      padding: 18px;
     }
 
-    .feature-card p,
-    .movement-card p,
-    .spec-card span{
-      color:var(--muted);
+    .feature h3 {
+      margin-bottom: 7px;
     }
 
-    .photo-grid{
-      grid-template-columns:repeat(2,1fr);
+    .feature p {
+      color: #aaa;
+      font-size: 14px;
     }
 
-    .photo-card{
-      margin:0;
-      background:var(--panel);
-      border:1px solid var(--line);
-      border-radius:14px;
-      overflow:hidden;
+    .details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
     }
 
-    .photo-card img{
-      width:100%;
-      aspect-ratio:4/3;
-      object-fit:cover;
+    .box {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 12px;
+      padding: 25px;
     }
 
-    .photo-card figcaption{
-      padding:14px;
-      font-weight:800;
+    .box h3 {
+      margin-bottom: 12px;
+      font-size: 22px;
     }
 
-    .spec-grid{
-      grid-template-columns:repeat(4,1fr);
+    .box p,
+    .box li {
+      color: #bbb;
     }
 
-    .spec-card strong{
-      display:block;
-      margin-top:6px;
+    .box ul {
+      padding-left: 20px;
     }
 
-    .notice{
-      border-left:3px solid var(--accent);
-      padding:12px 15px;
-      background:#101212;
-      color:#c9ccca;
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
     }
 
-    .faq details{
-      border-top:1px solid var(--line);
-      padding:20px 0;
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      background: #111;
+      border: 1px solid #222;
     }
-
-    .faq details:last-child{
-      border-bottom:1px solid var(--line);
-    }
-
-    .faq summary{
-      cursor:pointer;
-      font-size:18px;
-      font-weight:800;
-    }
-
-    .faq p{
-      color:var(--muted);
-      max-width:800px;
-      margin-bottom:0;
-    }
-
-    .cta{
-      max-width:var(--max);
-      margin:20px auto 70px;
-      padding:38px 24px;
-      border:1px solid var(--line);
-      border-radius:18px;
-      background:linear-gradient(135deg,#151717,#0c0d0d);
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:25px;
-    }
-
-    footer{
-      border-top:1px solid var(--line);
-      padding:35px 24px;
-      color:#929794;
-      text-align:center;
-    }
-
-    .footer-links{
-      display:flex;
-      justify-content:center;
-      gap:18px;
-      flex-wrap:wrap;
-      margin:15px 0;
-      font-size:13px;
-    }
-
-    @media(max-width:800px){
-
-      .nav a:not(.nav-cart){
-        display:none;
-      }
-
-      .hero,
-      .product-grid{
-        grid-template-columns:1fr;
-      }
-
-      .hero{
-        padding-top:35px;
-      }
-
-      .feature-grid,
-      .movement-grid,
-      .spec-grid{
-        grid-template-columns:1fr 1fr;
-      }
-
-      .photo-grid{
-        grid-template-columns:1fr;
-      }
-
-      .cta{
-        margin-left:24px;
-        margin-right:24px;
-        display:block;
-      }
-
-      .cta .btn{
-        margin-top:20px;
-        width:100%;
-      }
-    }
-
-    @media(max-width:520px){
-
-      .feature-grid,
-      .movement-grid,
-      .spec-grid{
-        grid-template-columns:1fr;
-      }
-
-      .hero,
-      .section{
-        padding-left:18px;
-        padding-right:18px;
-      }
-
-      h1{
-        font-size:47px;
-      }
-
-      .buy-box{
-        flex-wrap:wrap;
-      }
-
-      .buy-btn{
-        width:100%;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-<header class="site-header">
-
-  <a class="brand" href="index.html" aria-label="IRONPULSE home">
-    <span class="brand-mark">IP</span>
-    <span>IRONPULSE</span>
-  </a>
-
-  <nav class="nav" aria-label="Main navigation">
-    <a href="#product">Product</a>
-    <a href="#features">Features</a>
-    <a href="#faq">FAQ</a>
-
-    <a class="nav-cart" href="checkout.html">
-      Basket <span id="cart-count">0</span>
-    </a>
-  </nav>
-
-</header>
-
-
-<main>
-
-  <!-- HERO -->
-
-  <section class="hero">
-
-    <div>
-
-      <p class="eyebrow">
-        IRONPULSE • CABLE TRAINING
-      </p>
-
-      <h1>
-        TRAIN HARD.<br>
-        <em>GRIP BETTER.</em>
-      </h1>
-
-      <p class="hero-text">
-        An ergonomic tricep cable rope attachment designed to give you a comfortable, controlled grip during cable training.
-      </p>
-
-      <div class="hero-actions">
-
-        <a class="btn btn-primary" href="#product">
-          Shop IRONPULSE — £24.99
-        </a>
-
-        <a class="btn btn-ghost" href="#features">
-          See the details
-        </a>
-
-      </div>
-
-      <div class="trust-row">
-        <span>✓ UK stock</span>
-        <span>✓ Black finish</span>
-        <span>✓ Braided rope</span>
-      </div>
-
-    </div>
-
-
-    <!-- FIRST IMAGE = YOUR COMPANY LOGO -->
-
-    <div class="hero-photo">
-
-      <img
-        src="assets/ironpulse-brand.jpg"
-        alt="IRONPULSE company logo and brand image"
-      >
-
-      <span class="photo-tag">
-        IRONPULSE / OFFICIAL BRAND
-      </span>
-
-    </div>
-
-  </section>
-
-
-  <!-- PRODUCT -->
-
-  <section id="product" class="section">
-
-    <div class="section-label">
-      01 / THE PRODUCT
-    </div>
-
-    <div class="product-grid">
-
-      <div>
-
-        <div class="main-photo">
-
-          <img
-            src="assets/product-features.jpg"
-            alt="IRONPULSE ergonomic tricep rope attachment showing product features"
-          >
-
-        </div>
-
-        <div class="gallery">
-
-          <img
-            src="assets/product-action-2.webp"
-            alt="IRONPULSE cable rope attachment being used during training"
-          >
-
-          <img
-            src="assets/product-training.jpg"
-            alt="IRONPULSE cable rope attachment in a gym training setup"
-          >
-
-          <img
-            src="assets/product-size.jpg"
-            alt="IRONPULSE cable rope attachment size reference"
-          >
-
-        </div>
-
-      </div>
-
-
-      <div>
-
-        <p class="eyebrow">
-          ERGONOMIC TRICEP ROPE • BLACK
-        </p>
-
-        <h2>
-          Built for your<br>
-          <em>cable sessions.</em>
-        </h2>
-
-        <p class="lead">
-          Upgrade your cable setup with the IRONPULSE ergonomic tricep rope. The braided rope construction and molded handles are designed for a secure, comfortable training grip.
-        </p>
-
-        <div class="price-line">
-          <span class="price">£24.99</span>
-          <span class="price-note">per attachment</span>
-        </div>
-
-        <div class="stock">
-          ● IN STOCK — UK STOCK
-        </div>
-
-        <ul class="check-list">
-
-          <li>
-            <strong>Ergonomic handles</strong>
-            — molded handles designed for a comfortable grip.
-          </li>
-
-          <li>
-            <strong>Braided rope</strong>
-            — durable-looking rope construction shown in the product listing.
-          </li>
-
-          <li>
-            <strong>Versatile cable training</strong>
-            — suitable for exercises such as tricep pushdowns, extensions and curls when used with a compatible cable system.
-          </li>
-
-          <li>
-            <strong>Black finish</strong>
-            — clean, understated look for your gym setup.
-          </li>
-
-        </ul>
-
-
-        <div class="buy-box">
-
-          <div class="qty">
-
-            <button
-              type="button"
-              data-qty="-1"
-              aria-label="Decrease quantity"
-            >
-              −
-            </button>
-
-            <span id="qty-value">1</span>
-
-            <button
-              type="button"
-              data-qty="1"
-              aria-label="Increase quantity"
-            >
-              +
-            </button>
-
-          </div>
-
-          <button
-            class="btn btn-primary buy-btn"
-            id="add-to-cart"
-            type="button"
-          >
-            Add to basket
-          </button>
-
-        </div>
-
-        <p class="small-note">
-          Securely check the attachment and your cable connection before every use. Follow the equipment manufacturer's safe-use guidance.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- FEATURES -->
-
-  <section id="features" class="section dark-section">
-
-    <div>
-
-      <div class="section-label">
-        02 / FEATURES
-      </div>
-
-      <div class="feature-grid">
-
-        <article class="feature-card">
-
-          <span class="feature-num">01</span>
-
-          <h3>
-            Ergonomic grip
-          </h3>
-
-          <p>
-            Molded handles give you a defined grip position while you work through your cable movements.
-          </p>
-
-        </article>
-
-
-        <article class="feature-card">
-
-          <span class="feature-num">02</span>
-
-          <h3>
-            Braided rope
-          </h3>
-
-          <p>
-            The listing shows a braided rope construction designed for regular cable-training use.
-          </p>
-
-        </article>
-
-
-        <article class="feature-card">
-
-          <span class="feature-num">03</span>
-
-          <h3>
-            One attachment, many movements
-          </h3>
-
-          <p>
-            Use it with a compatible cable system for tricep work and other cable exercises.
-          </p>
-
-        </article>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- PRODUCT PHOTOS -->
-
-  <section class="section">
-
-    <div class="section-label">
-      03 / SEE THE PRODUCT
-    </div>
-
-    <div class="photo-grid">
-
-      <figure class="photo-card">
-
-        <img
-          src="assets/product-action.png"
-          alt="IRONPULSE cable rope attachment being used for a cable exercise"
-        >
-
-        <figcaption>
-          Train with control.
-        </figcaption>
-
-      </figure>
-
-
-      <figure class="photo-card">
-
-        <img
-          src="assets/product-action-2.webp"
-          alt="IRONPULSE cable rope attachment in use"
-        >
-
-        <figcaption>
-          Designed for cable training.
-        </figcaption>
-
-      </figure>
-
-
-      <figure class="photo-card">
-
-        <img
-          src="assets/product-training.jpg"
-          alt="IRONPULSE cable rope attachment used during gym training"
-        >
-
-        <figcaption>
-          Made for your next session.
-        </figcaption>
-
-      </figure>
-
-
-      <figure class="photo-card">
-
-        <img
-          src="assets/ironpulse-brand.jpg"
-          alt="IRONPULSE brand product image"
-        >
-
-        <figcaption>
-          IRONPULSE — train with purpose.
-        </figcaption>
-
-      </figure>
-
-    </div>
-
-  </section>
-
-
-  <!-- SIZE -->
-
-  <section class="section dark-section">
-
-    <div>
-
-      <div class="section-label">
-        04 / SIZE REFERENCE
-      </div>
-
-      <div class="product-grid">
-
-        <div class="main-photo">
-
-          <img
-            src="assets/product-size.jpg"
-            alt="IRONPULSE product size reference showing dimensions"
-          >
-
-        </div>
-
-
-        <div>
-
-          <h2>
-            Check the <em>dimensions.</em>
-          </h2>
-
-          <p class="lead">
-            The dimensions shown here are taken from the product listing image supplied for this product.
-          </p>
-
-          <p class="notice">
-
-            <strong>Size shown in listing:</strong>
-            approximately 36 inches wide, 18 inches long, with handles shown at approximately 4.5 × 3.5 inches and a 0.75-inch connector opening.
-
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- TRAINING IDEAS -->
-
-  <section class="section">
-
-    <div class="section-label">
-      05 / TRAINING IDEAS
-    </div>
-
-    <div class="movement-grid">
-
-      <article class="movement-card">
-
-        <span class="movement-num">01</span>
-
-        <h3>
-          Tricep pushdown
-        </h3>
-
-        <p>
-          Attach to a compatible cable station and perform controlled pushdowns through a comfortable range of motion.
-        </p>
-
-      </article>
-
-
-      <article class="movement-card">
-
-        <span class="movement-num">02</span>
-
-        <h3>
-          Overhead extension
-        </h3>
-
-        <p>
-          Use the rope for overhead tricep work when your cable setup allows a safe and comfortable position.
-        </p>
-
-      </article>
-
-
-      <article class="movement-card">
-
-        <span class="movement-num">03</span>
-
-        <h3>
-          Cable curl
-        </h3>
-
-        <p>
-          A versatile option for cable curls when the attachment and machine setup are suitable.
-        </p>
-
-      </article>
-
-
-      <article class="movement-card">
-
-        <span class="movement-num">04</span>
-
-        <h3>
-          Other cable movements
-        </h3>
-
-        <p>
-          Explore other compatible exercises while keeping the attachment secure and using controlled technique.
-        </p>
-
-      </article>
-
-    </div>
-
-  </section>
-
-
-  <!-- PRODUCT DETAILS -->
-
-  <section class="section dark-section">
-
-    <div>
-
-      <div class="section-label">
-        06 / PRODUCT DETAILS
-      </div>
-
-      <div class="spec-grid">
-
-        <div class="spec-card">
-          <span>Product</span>
-          <strong>Ergonomic Tricep Cable Rope</strong>
-        </div>
-
-        <div class="spec-card">
-          <span>Colour</span>
-          <strong>Black</strong>
-        </div>
-
-        <div class="spec-card">
-          <span>Construction</span>
-          <strong>Braided rope with molded handles</strong>
-        </div>
-
-        <div class="spec-card">
-          <span>Use</span>
-          <strong>Cable & strength training</strong>
-        </div>
-
-      </div>
-
-      <p class="small-note">
-        Compatibility depends on the connector and cable machine being used. Always make sure the attachment is properly secured before training and follow the cable machine manufacturer's instructions.
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <!-- FAQ -->
-
-  <section id="faq" class="section faq">
-
-    <div class="section-label">
-      07 / FREQUENTLY ASKED QUESTIONS
-    </div>
-
-
-    <details open>
-
-      <summary>
-        What is included?
-      </summary>
-
-      <p>
-        One IRONPULSE ergonomic tricep cable rope attachment. The product is supplied as shown in the listing photographs.
-      </p>
-
-    </details>
-
-
-    <details>
-
-      <summary>
-        What exercises can I use it for?
-      </summary>
-
-      <p>
-        It can be used for compatible cable exercises including tricep pushdowns, overhead extensions and cable curls. Other movements may also be possible depending on your cable machine and setup.
-      </p>
-
-    </details>
-
-
-    <details>
-
-      <summary>
-        Will it fit my cable machine?
-      </summary>
-
-      <p>
-        Compatibility depends on the connector and cable system. Check your machine's attachment point and make sure the connection is secure before use.
-      </p>
-
-    </details>
-
-
-    <details>
-
-      <summary>
-        What colour is it?
-      </summary>
-
-      <p>
-        Black, as shown in the product photographs.
-      </p>
-
-    </details>
-
-
-    <details>
-
-      <summary>
-        When will my order be dispatched?
-      </summary>
 
-      <p>
-        Orders are supplied from UK stock. Dispatch and delivery time depend on the delivery service and destination. Please check the
+    .cta {
+      text-align
